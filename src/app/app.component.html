@@ -1,0 +1,107 @@
+<div class="container">
+  @if (state === 0) {
+    <div class="start">
+      <div class="title">
+        <h1>Let's workout</h1>
+        <h3>Day {{ count }}</h3>
+      </div>
+
+      <div class="contain">
+        <div class="days">
+          @for (day of data.days; track $index) {
+            <div class="day">
+              <img [src]="day.filePath" [alt]="day.focus">
+
+              <div class="upper">
+                <h3>{{ day.day }}</h3>
+
+                <p>{{ day.focus }}</p>
+              </div>
+            </div>
+          }
+        </div>
+
+        <div class="current">
+          @if (currentDay !== 7) {
+            <img [src]="current.filePath" [alt]="current.focus">
+
+            <div class="upper">
+              <h2>{{ current.focus }}</h2>
+
+              <h4>{{ current.exercises?.length }} exercises</h4>
+            </div>
+          }
+        </div>
+      </div>
+
+      <button class="btn-start" (click)="onStart()">Start</button>
+    </div>
+  }
+
+  @if (state === 1) {
+    <div class="workout">
+      <div class="ready">
+        <!-- warm up -->
+      </div>
+
+      @if (!currentExercise.finished) {
+        <div class="exercise">
+          <div class="upper">
+            <div class="header">
+              <p class="primary">Exercises {{ currentExercise.id }}/{{ todayExercises.length }}</p>
+              <p class="secondary">{{ getWorkoutTotalTime() }}</p>
+            </div>
+
+            <!-- <video autoplay="" playsinline="" loop="" src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-pec-fly-side.mp4#t=0.1" class="rounded-lg lazy  rounded-t-none" poster="https://media.musclewiki.com/media/uploads/og-male-Machine-machine-pec-fly-side.jpg"><source src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-pec-fly-side.mp4#t=0.1"></video> -->
+          </div>
+
+          <div class="bellow">
+            <div class="main">
+              <p class="name">{{ currentExercise.name }}</p>
+
+              <p class="rep">x {{ currentExercise.reps }}</p>
+            </div>
+
+            <button class="btn-next" (click)="onFinish(currentExercise.id)">Next</button>
+          </div>
+        </div>
+      } @else {
+        <div class="rest">
+          <div class="upper">
+            <p class="title">rest</p>
+
+            <p class="time">{{ getRestTime() }}</p>
+
+            <div class="actions">
+              <button class="more" (click)="onMoreRest()">+10s</button>
+
+              <button class="skip" (click)="onNext()">skip</button>
+            </div>
+
+            <div class="next">
+              @if (nextExercise) {
+                <p>next {{ currentExercise.id + 1 }}/{{ todayExercises.length }}</p>
+
+                <div class="excercise">
+                  <p class="name">{{ nextExercise.name }}</p>
+
+                  <p class="rep">x{{ nextExercise.reps }}</p>
+                </div>
+              }
+            </div>
+          </div>
+
+          <div class="bellow">
+            <!-- <video autoplay="" playsinline="" loop="" src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-pec-fly-side.mp4#t=0.1" class="rounded-lg lazy  rounded-t-none" poster="https://media.musclewiki.com/media/uploads/og-male-Machine-machine-pec-fly-side.jpg"><source src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-pec-fly-side.mp4#t=0.1"></video> -->
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  @if (state == 2) {
+    <div class="end">
+      <h2>Finished day {{ count }}</h2>
+    </div>
+  }
+</div>
