@@ -157,7 +157,7 @@ export class AppComponent implements OnInit {
 
   onMoreRest(): void {
     // Add 10 seconds to rest time
-    this.restStartTime -= 10000; // Move start time back 10 seconds
+    this.restStartTime += 10000; // Move start time back 10 seconds
 
     // Update displayed rest time
     this.restTime = Math.floor((Date.now() - this.restStartTime) / 1000);

@@ -9,7 +9,7 @@
       <div class="contain">
         <div class="days">
           @for (day of data.days; track $index) {
-            <div class="day">
+            <div class="day" [ngClass]="day.day == current.day ? 'active' : ''">
               <img [src]="day.filePath" [alt]="day.focus">
 
               <div class="upper">
@@ -30,11 +30,11 @@
 
               <h4>{{ current.exercises?.length }} exercises</h4>
             </div>
+
+            <button class="btn-start" (click)="onStart()">Start</button>
           }
         </div>
       </div>
-
-      <button class="btn-start" (click)="onStart()">Start</button>
     </div>
   }
 
