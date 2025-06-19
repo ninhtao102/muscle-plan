@@ -14,6 +14,12 @@ export const masterData = {
     "note": "Tận dụng tạ 5kg hoặc tăng reps nếu bài tập quá nhẹ"
   },
   "repeat": 3,
+  "warmUp": {
+    "name": "Jumping Jacks",
+    "reps": 20,
+    "rest": 30,
+    "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Cardio-cardio-jumping-jacks-front.mp4#t=0.1",
+  },
   "days": [
     {
       "day": 1,
@@ -25,21 +31,25 @@ export const masterData = {
           "name": "Push-up",
           "reps": 12,
           "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-push-up-side.mp4#t=0.1",
         },
         {
           "name": "Diamond Push-up",
           "reps": 8,
           "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-diamond-push-ups-side.mp4#t=0.1"
         },
         {
           "name": "Incline Push-up",
           "reps": 10,
-          "rest": 45
+          "rest": 45,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-incline-push-up-side.mp4#t=0.1"
         },
         {
           "name": "Dumbbell Overhead Triceps",
           "reps": 12,
-          "rest": 30
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-overhead-tricep-extension-side.mp4#t=0.1"
         },
       ]
     },
@@ -52,22 +62,26 @@ export const masterData = {
         {
           "name": "Chin-up",
           "reps": 6,
-          "rest": 45
+          "rest": 45,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-bodyweight-chinup-front.mp4#t=0.1",
         },
         {
           "name": "Dumbbell Bicep Curl",
           "reps": 12,
-          "rest": 30
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-curl-front.mp4#t=0.1",
         },
         {
           "name": "Dumbbell Hammer Curl",
           "reps": 12,
-          "rest": 30
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-hammer-curl-front.mp4#t=0.1",
         },
         {
           "name": "Dumbbell Wrist Curl",
           "reps": 15,
-          "rest": 20
+          "rest": 20,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-wrist-curl-side.mp4#t=0.1",
         }
       ]
     },
@@ -80,24 +94,27 @@ export const masterData = {
         {
           "name": "Pull-up",
           "reps": 6,
-          "rest": 45
+          "rest": 45,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-bodyweight-pullup-front.mp4#t=0.1",
+        },
+        {
+          "name": "Inverted Row",
+          "reps": 8,
+          "rest": 45,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-bodyweight-reverse-row-side.mp4#t=0.1",
         },
         {
           "name": "Dumbbell Bent-over Row",
           "reps": 12,
-          "rest": 30
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-row-bilateral-side.mp4#t=0.1",
         },
         {
-          "name": "Superman Hold",
-          "duration": 20,
-          "rest": 20,
-          "note": "Tập lưng dưới"
+          "name": "Dead Hang (Bar Hold)",
+          "reps": 15,
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-dead-hang-front.mp4#t=0.1",
         },
-        {
-          "name": "Dumbbell Full Lateral Raise",
-          "reps": 12,
-          "rest": 30
-        }
       ]
     },
     {
@@ -107,11 +124,35 @@ export const masterData = {
       "filePath": "assets/abs.png",
       "exercises": [
         {
-          "name": "Leg Raise",
-          "reps": 12,
-          "rest": 30
+          "name": "Butterfly Flaps",
+          "reps": 10,
+          "rest": 10,
+          "video": "https://gymvisual.com/img/vid/04000/48671201-butterfly-yoga-flaps-hips-view.mp4"
         },
-        
+        {
+          "name": "Bridge Hip Abductor",
+          "reps": 10,
+          "rest": 10,
+          "video": "https://gymvisual.com/img/vid/04000/48811201-bridge-hip-abduction-male-hips-view.mp4"
+        },
+        {
+          "name": "Elbow Tap Front Plank",
+          "reps": 10,
+          "rest": 10,
+          "video": "https://gymvisual.com/img/vid/04000/45801201-cat-cow-stretch-stretching-view.mp4"
+        },
+        {
+          "name": "Plank To Pike",
+          "reps": 10,
+          "rest": 10,
+          "video": "https://gymvisual.com/img/vid/04000/48781201-plank-to-pike-waist-view.mp4"
+        },
+        {
+          "name": "Rocking Frog Stretches",
+          "reps": 10,
+          "rest": 10,
+          "video": "https://gymvisual.com/img/vid/02000/25711201-rocking-frog-stretch-hips-fix-view.mp4"
+        },
       ]
     },
     {
@@ -123,49 +164,94 @@ export const masterData = {
         {
           "name": "Squat",
           "reps": 15,
-          "rest": 30
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-bodyweight-squat-side.mp4#t=0.1",
         },
         {
           "name": "Dumbbell Bulgarian Split Squat",
           "reps": 10,
           "rest": 45,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-bulgarian-split-squat-side.mp4#t=0.1",
           "note": "10 mỗi chân"
         },
         {
           "name": "Glute Bridge",
           "reps": 15,
-          "rest": 30
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-glute-bridge-front.mp4#t=0.1",
         },
         {
           "name": "Dumbbell Calf Raise",
           "reps": 20,
-          "rest": 20
+          "rest": 20,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-calf-raise-side.mp4#t=0.1",
         }
       ]
     },
     {
       "day": 6,
-      "focus": "Cardio",
-      "goal": "Đốt mỡ và tăng sức bền",
+      "focus": "Vai",
+      "goal": "Phát triển ",
       "filePath": "assets/full-body.png",
       "exercises": [
         {
-          "name": "Burpee",
+          "name": "Dumbbell Lateral Raise",
           "reps": 12,
-          "rest": 30
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-lateral-raise-front.mp4#t=0.1",
         },
         {
-          "name": "High Knees (Chạy nâng cao đùi)",
-          "duration": 30,
-          "rest": 20
+          "name": "Dumbbell Front Raise",
+          "reps": 12,
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-front-raise-side.mp4#t=0.1",
+        },
+        // {
+        //   "name": "Dumbbell Seated Overhead Press",
+        //   "reps": 12,
+        //   "rest": 30,
+        //   "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-dumbbell-seated-overhead-press-side.mp4#t=0.1",
+        // },
+        {
+          "name": "Dumbbell Rear Delt Row",
+          "reps": 12,
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-rear-delt-row-front.mp4#t=0.1",
         },
         {
-          "name": "Mountain Climber",
-          "reps": 20,
-          "rest": 30
-        }
+          "name": "Dumbbell Shrug",
+          "reps": 12,
+          "rest": 30,
+          "video": "https://media.musclewiki.com/media/uploads/videos/branded/male-Dumbbells-dumbbell-shrug-front.mp4#t=0.1",
+        },
       ]
     },
+    // {
+    //   "day": 6,
+    //   "focus": "Cardio",
+    //   "goal": "Đốt mỡ và tăng sức bền",
+    //   "filePath": "assets/full-body.png",
+    //   "exercises": [
+    //     {
+    //       "name": "Burpee",
+    //       "reps": 12,
+    //       "rest": 30,
+    //       "video": "",
+    //     },
+    //     {
+    //       "name": "High Knees (Chạy nâng cao đùi)",
+    //       "duration": 30,
+    //       "rest": 20,
+    //       "video": "",
+    //     },
+    //     {
+    //       "name": "Mountain Climber",
+    //       "reps": 20,
+    //       "rest": 30,
+    //       "video": "",
+    //     }
+    //   ]
+    // },
     {
       "day": 7,
       "focus": "Rest Day",

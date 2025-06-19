@@ -72,6 +72,11 @@ export class AppComponent implements OnInit {
     this.todayExercises = [];
     if (this.current.exercises) {
       let idCounter = 1;
+      this.todayExercises.push({
+        ...this.data.warmUp,
+        finished: false,
+      });
+
       for (let i = 0; i < this.data.repeat; i++) {
         this.current.exercises.forEach((exercise: any) => {
           this.todayExercises.push({

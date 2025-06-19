@@ -48,11 +48,12 @@
         <div class="exercise">
           <div class="upper">
             <div class="header">
-              <p class="primary">Exercises {{ currentExercise.id }}/{{ todayExercises.length }}</p>
+              <p class="primary">Exercises {{ currentExercise.id || 0 }}/{{ todayExercises.length }}</p>
               <p class="secondary">{{ getWorkoutTotalTime() }}</p>
             </div>
 
-            <!-- <video autoplay="" playsinline="" loop="" src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-pec-fly-side.mp4#t=0.1" class="rounded-lg lazy  rounded-t-none" poster="https://media.musclewiki.com/media/uploads/og-male-Machine-machine-pec-fly-side.jpg"><source src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-pec-fly-side.mp4#t=0.1"></video> -->
+            <video playsinline autoplay loop [src]="currentExercise.video" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"></video>
+            <p>{{ currentExercise.note || '' }}</p>
           </div>
 
           <div class="bellow">
@@ -80,7 +81,7 @@
 
             <div class="next">
               @if (nextExercise) {
-                <p>next {{ currentExercise.id + 1 }}/{{ todayExercises.length }}</p>
+                <p>next {{ currentExercise.id + 1 || 0 }}/{{ todayExercises.length }}</p>
 
                 <div class="excercise">
                   <p class="name">{{ nextExercise.name }}</p>
@@ -92,7 +93,7 @@
           </div>
 
           <div class="bellow">
-            <!-- <video autoplay="" playsinline="" loop="" src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-pec-fly-side.mp4#t=0.1" class="rounded-lg lazy  rounded-t-none" poster="https://media.musclewiki.com/media/uploads/og-male-Machine-machine-pec-fly-side.jpg"><source src="https://media.musclewiki.com/media/uploads/videos/branded/male-Machine-machine-pec-fly-side.mp4#t=0.1"></video> -->
+            <video playsinline autoplay loop [src]="nextExercise.video" style="margin-top: 8px; width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"></video>
           </div>
         </div>
       }
