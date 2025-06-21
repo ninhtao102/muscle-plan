@@ -192,7 +192,7 @@ export const masterData = {
       "day": 6,
       "focus": "Vai",
       "goal": "Phát triển ",
-      "filePath": "assets/full-body.png",
+      "filePath": "assets/shoulders.png",
       "exercises": [
         {
           "name": "Dumbbell Lateral Raise",

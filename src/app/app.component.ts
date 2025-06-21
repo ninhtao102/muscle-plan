@@ -28,6 +28,8 @@ export class AppComponent implements OnInit {
   isResting: boolean = false;
   timerInterval: any;
 
+  selectedDay: number = 0
+
   ngOnInit(): void {
     this.loadWorkoutData();
     this.loadTodayExercises();
@@ -61,8 +63,11 @@ export class AppComponent implements OnInit {
     localStorage.setItem('lastWorkoutDate', new Date().toDateString());
   }
 
-  loadTodayExercises(): void {
+  loadTodayExercises(id: number = 0): void {
     this.current = this.data.days.find(day => day.day === this.currentDay);
+    if (id) {
+      this.current = this.data.days.find(day => day.day === id);
+    }
 
     if (!this.current || this.current.day === 7) {
       this.todayExercises = [];
